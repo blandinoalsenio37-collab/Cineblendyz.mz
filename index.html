@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Blendyz Moviesmp4 — filmes e séries.">
+  <title>Blendyz Moviesmp4</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Blendyz Moviesmp4 início"><span class="brand-mark">B</span><span>BLENDYZ <b>MOVIESMP4</b></span></a>
+    <nav class="nav"><a href="#inicio">Início</a><a href="#catalogo">Catálogo</a><a href="#tutorial">Como baixar</a><button id="adminOpen" class="btn btn-outline" type="button">Administração</button></nav>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content"><p class="eyebrow">ENTRETENIMENTO NUM SÓ LUGAR</p><h1>Encontra a tua próxima <span>história.</span></h1><p id="heroDescription">Explora filmes e séries. Pesquisa o título que procuras e escolhe o que queres ver.</p><a class="btn btn-gold" href="#catalogo">Explorar catálogo</a></div>
+      <div class="hero-art" aria-hidden="true"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="hero-play">▶</div><span class="hero-label">BLENDYZ</span></div>
+    </section>
+    <section class="catalog-section" id="catalogo">
+      <div class="section-heading"><div><p class="eyebrow">ESCOLHE O TEU CONTEÚDO</p><h2>Catálogo</h2></div><span id="resultCount" class="result-count">0 conteúdos</span></div>
+      <div class="toolbar"><label class="searchbox"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Pesquisar filmes e séries..." aria-label="Pesquisar filmes e séries"></label><div class="filters" role="group" aria-label="Filtrar catálogo"><button class="filter active" data-filter="Todos">Todos</button><button class="filter" data-filter="Filme">Filmes</button><button class="filter" data-filter="Série">Séries</button></div></div>
+      <div id="catalogGrid" class="catalog-grid"></div><div id="emptyState" class="empty-state"><div class="empty-icon">▧</div><h3>Ainda não há conteúdos</h3><p>Quando adicionares títulos ao catálogo publicado, aparecerão aqui.</p></div>
+    </section>
+    <section class="tutorial-section" id="tutorial"><div><p class="eyebrow">GUIA RÁPIDO</p><h2 id="tutorialTitle">Tutorial de como baixar</h2><p id="tutorialText">Abre um título, escolhe o link disponibilizado e segue as instruções da página de origem. Usa apenas conteúdos que tenhas autorização para aceder.</p></div><a id="tutorialLink" class="btn btn-outline" href="#" target="_blank" rel="noopener" hidden>Ver tutorial ↗</a></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark">B</span><span>BLENDYZ <b>MOVIESMP4</b></span></a><p id="footerText">© <span id="year"></span> Blendyz Moviesmp4. Todos os direitos reservados.</p></footer>
+
+  <dialog id="playerDialog" class="modal"><button class="modal-close" data-close="playerDialog" aria-label="Fechar">×</button><div id="playerBody" class="player-body"></div></dialog>
+  <dialog id="adminDialog" class="modal admin-modal"><button class="modal-close" data-close="adminDialog" aria-label="Fechar">×</button><div id="adminBody"></div></dialog>
+  <dialog id="detailsDialog" class="modal details-modal"><button class="modal-close" data-close="detailsDialog" aria-label="Fechar">×</button><div id="detailsBody"></div></dialog>
+  <input id="posterFile" type="file" accept="image/*" hidden>
+</body>
+</html>
